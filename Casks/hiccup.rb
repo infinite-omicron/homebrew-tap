@@ -21,11 +21,10 @@ cask "hiccup" do
   # hiccup finds hiccup-burp.jar next to its binary, so it stays in the staged folder.
   binary "hiccup_#{version}_#{os}_#{arch}/hiccup"
 
-  postflight do
-    # The binaries are not notarized; clear the quarantine flag so macOS runs them.
-    if OS.mac?
-      system_command "/usr/bin/xattr",
-                     args: ["-dr", "com.apple.quarantine", staged_path.to_s]
+  postflight_steps do
+    on_macos do
+      # The binaries are not notarized; clear the quarantine flag so macOS runs them.
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "."], chdir: "."
     end
   end
 
