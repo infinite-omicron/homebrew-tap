@@ -2,11 +2,11 @@ cask "hiccup" do
   arch arm: "arm64", intel: "amd64"
   os macos: "darwin", linux: "linux"
 
-  version "0.1.0"
-  sha256 arm:          "dd786aac50e9ff8f285d6485b3f9fd3d46048c61641d9eb6865b5b73b8320c6c",
-         intel:        "bde7f9e57a52a3f51bb16915e5674bf5036850168feb54bf9bb1d3d9ddf2b090",
-         arm64_linux:  "60a65573c5cc7e99acab7cb75e65e80499e01272059d0e24484c0ccd76930dc9",
-         x86_64_linux: "9b90098bac800dda822982ca35b577a07e9b97878ca70bc1dd5d4a98b82bef01"
+  version "0.2.0"
+  sha256 arm:          "48259b2e32151f5288e557fdadacf1907d79ec45fcd18260acdce2f82af88285",
+         intel:        "3f78f86a064b809e222080c25aeddb7ee5a8fb934d5fa9ddfbdab57e11929549",
+         arm64_linux:  "7ed795ac84edaa47bfb1e5facd047d148e9aaf3d322cb35909d2c2d83aac613b",
+         x86_64_linux: "95635dcbe59a74d4042f37b2b536f97497181e4194f1ac6c4c30f1c18620e2b5"
 
   url "https://github.com/infinite-omicron/hiccup/releases/download/v#{version}/hiccup_#{version}_#{os}_#{arch}.tar.gz"
   name "hiccup"
